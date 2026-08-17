@@ -1,0 +1,17 @@
+Privacy drill run after reports/benchmark.md was saved
+====================================================
+
+$ python -m src.forget --user-id minh-lab17
+Deleting user-scoped memory for 'minh-lab17'...
+Redis keys deleted: 0
+Zep user absent: True
+Redis user keys remaining: 0
+Shared semantic KB remains intact because it stores domain knowledge, not user PII.
+
+$ python -m src.forget --user-id minh-lab17 --verify-only
+Zep user absent: True
+Redis user keys remaining: 0
+Shared semantic KB remains intact because it stores domain knowledge, not user PII.
+
+After this evidence was captured, `python -m src.seed` completed successfully so the
+synthetic users and shared semantic graph are ready for UI/golden evaluation again.
